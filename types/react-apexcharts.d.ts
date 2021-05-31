@@ -21,7 +21,7 @@ declare module "react-apexcharts" {
     | "radar"
     | "polarArea"
     | "rangeBar",
-    series?: ApexOptions['series'],
+    series?: any[],
     width?: string | number,
     height?: string | number,
     options?: ApexOptions,
