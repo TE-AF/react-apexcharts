@@ -111,9 +111,11 @@ export default class Charts extends Component {
       height !== prevProps.height ||
       width !== prevProps.width
     ) {
+      const redraw = false;
+      const animate = false;
       if (prevSeries === currentSeries) {
         // series has not changed, but options or size have changed
-        this.chart.updateOptions(this.getConfig())
+        this.chart.updateOptions(this.getConfig(), redraw, animate)
       } else if (
         prevOptions === currentOptions &&
         height === prevProps.height &&
@@ -123,7 +125,8 @@ export default class Charts extends Component {
         this.chart.updateSeries(series)
       } else {
         // both might be changed
-        this.chart.updateOptions(this.getConfig())
+        // Disable animation
+        this.chart.updateOptions(this.getConfig(), redraw, animate)
       }
     }
   }
