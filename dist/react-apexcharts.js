@@ -108,13 +108,13 @@ export default class Charts extends Component {
     if (prevOptions !== currentOptions || prevSeries !== currentSeries) {
       if (prevSeries === currentSeries) {
         // series is not changed,but options are changed
-        this.chart.updateOptions(this.getConfig())
+        this.chart.updateOptions(this.getConfig(), false, false)
       } else if (prevOptions === currentOptions) {
         // options are not changed, just the series is changed
         this.chart.updateSeries(series)
       } else {
         // both might be changed
-        this.chart.updateOptions(this.getConfig())
+        this.chart.updateOptions(this.getConfig(), false, false)
       }
     }
   }

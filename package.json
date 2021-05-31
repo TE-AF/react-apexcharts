@@ -29,7 +29,7 @@
     "prop-types": "^15.5.7"
   },
   "peerDependencies": {
-    "apexcharts": "^3.18.0",
+    "apexcharts": "https://github.com/TE-AF/apexcharts.js",
     "react": ">=0.13"
   },
   "devDependencies": {
